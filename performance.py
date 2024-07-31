@@ -19,7 +19,7 @@ def test_performance_glitch_user():
     # Verify if the page eventually loads, allowing extra time
     start_time = time.time()
     try:
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 0.20).until(
             EC.presence_of_element_located((By.CLASS_NAME, "inventory_item"))
         )
         load_time = time.time() - start_time

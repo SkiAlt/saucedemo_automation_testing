@@ -5,13 +5,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-# Replace with the path to your ChromeDriver
-driver_path = r'C:\Users\Shashank\Desktop\chromedriver-win64\chromedriver.exe'
-
-# Initialize the WebDriver
-driver = webdriver.Chrome(executable_path=driver_path)
 
 try:
+    driver = webdriver.Chrome()
     # Open the SauceDemo login page
     driver.get('https://www.saucedemo.com/')
     

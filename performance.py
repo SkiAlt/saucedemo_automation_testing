@@ -7,13 +7,27 @@ import time
 def test_performance_glitch_user():
     driver = webdriver.Chrome()
     driver.get("https://www.saucedemo.com/")
+    
+    # Adding sleep to simulate user thinking time
+    time.sleep(2)
 
     username_input = driver.find_element(By.ID, "user-name")
     password_input = driver.find_element(By.ID, "password")
     login_button = driver.find_element(By.ID, "login-button")
+    
+    # Adding sleep to simulate user interaction
+    time.sleep(2)
 
     username_input.send_keys("performance_glitch_user")
+    
+    # Adding sleep to simulate user interaction
+    time.sleep(1)
+
     password_input.send_keys("secret_sauce")
+    
+    # Adding sleep to simulate user interaction
+    time.sleep(1)
+
     login_button.click()
 
     # Verify if the page eventually loads, allowing extra time
